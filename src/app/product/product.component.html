@@ -1,0 +1,5 @@
+<td>{{product.id}}</td>
+        <td>{{product.brand | uppercase}}</td>
+        <td>{{product.price}}</td>
+        <td><input type="checkbox" disabled="ture" [checked]="product.inStock"></td>
+        <td class="text-muted">{{product.lastUpdated | date:"MMM-dd-yyyy HH:MM"}}</td>

@@ -1,0 +1,27 @@
+<h2 [ngClass]="fg">{{getString()}}</h2>
+<h2 [ngStyle]="style">{{title}}</h2>
+<input type="text" [(ngModel)]="title">
+<button (click)="onClick(1)" [hidden]="show">click</button>
+<select (change)="onChange()" *ngIf="show">
+    <option>samsung</option>
+    <option>apple</option>
+    <option>htc</option>
+</select>
+<table border="1">
+    <tr>
+        <td>Values</td>
+        <td>index</td>
+        <td>even</td>
+        <td>odd</td>
+        <td>first</td>
+        <td>last</td>
+    </tr>
+    <tr *ngFor="let number of arr;let idx=index; let ev=even;let od=odd;let fst=first; let lst=last;" [ngClass]="ev?'red':'green'">
+        <td>{{number}}</td>
+        <td>{{idx}}</td>
+        <td>{{ev}}</td>
+        <td>{{od}}</td>
+        <td>{{fst}}</td>
+        <td>{{lst}}</td>
+    </tr>
+</table>

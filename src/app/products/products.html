@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="col-md-8">
+<table class="table table-bordered">
+    <tr>
+        <td>No</td>
+        <td>Brand</td>
+        <td>Price</td>
+        <td>Instock</td>
+        <td>lastUpdated</td>
+    </tr>
+    <tr *ngFor="let prd of products">
+        <app-product [product]="prd"></app-product>
+    </tr>
+</table>
+</div>
+</div>
